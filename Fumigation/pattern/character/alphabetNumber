@@ -1,0 +1,21 @@
+
+// A 96
+// A B 97
+// A B C 98
+// A B C D 99
+// A B C D E 100
+
+
+
+#include <stdio.h>
+int main() {
+int n=5;
+char let = 'A';
+for(int i=0; i<n; i++) {
+for(int j=0; j<=i; j++) {
+  printf("%c ",let+j);
+}
+printf("%d",let+31+i);
+printf("\n");
+}
+}
