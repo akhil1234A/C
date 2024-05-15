@@ -103,4 +103,36 @@ int main()
    }
 }
 
+X X X X X X 
+X
+X X X X 
+X
+X X 
+X
 
+#include <stdio.h>
+
+int main()
+{
+    for(int i=3; i>0; i--){
+        for(int j=0; j<i*2; j++){
+            printf("X ");
+        }
+        for(int j=0; j<1; j++){
+            printf("\nX");
+        }
+        printf("\n");
+    }
+}
+
+//advanced
+#include <stdio.h>
+int main()
+{
+    for(int i=6; i>0; i--){
+        for(int j=0; j<(i==0 || i%2==0 ? i : 1); j++){
+            printf("X ");
+        }
+        printf("\n");
+    }
+}
