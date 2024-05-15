@@ -15,7 +15,7 @@ printf("enter the number to insert: ");
 scanf("%d",&num); 
 
 
-for(int i=pos-1; i>=pos; i--)
+for(int i=size-1; i>=pos; i--)
     arr[i+1]=arr[i];
 arr[pos]=num;
 size++;
