@@ -77,6 +77,7 @@ for(int i=size-1; i>=0; i--){
 
 return 0; 
 }
+
 //reverse an array
 #include <stdio.h>
 
@@ -100,3 +101,4 @@ for(int i=0; i<size; i++){
 
 return 0; 
 }
+
