@@ -82,5 +82,25 @@ int main()
    }
 }
 
-//advanced 
+//advanced with two loops
+#include <stdio.h>
+
+int main()
+{
+    int index=1, val=2,j=0,mulOftwo=0; 
+   for(int i=1; i<=9; i++){
+
+    int condition = (i==index ? mulOftwo+=2 : 1);
+  
+      for(j=0; j<condition; j++){
+          printf("* ");
+      }
+      if(j!=1){
+      index=index+val;
+      val++;
+      }
+      printf("\n");
+   }
+}
+
 
