@@ -1,14 +1,15 @@
-// * * * 
-// *
-// *
-// * * * * * * 
-// *
-// *
-// * * * * * * * * * 
-// *
-// *
+pattern 1
 
-Question 1
+* * * 
+*
+*
+* * * * * * 
+*
+*
+* * * * * * * * * 
+*
+*
+
 #include <stdio.h>
 int main() {
 
@@ -38,7 +39,7 @@ int main()
    }
 }
 
-Question 2
+pattern 2
 * * * * * * 
 * 
 * * * * 
@@ -57,6 +58,8 @@ int main()
        printf("\n");
    }
 }
+
+pattern 3
 X X X X X X 
 X
 X X X X 
@@ -104,7 +107,8 @@ int main()
     }
 }
 
-Question 3
+pattern 4 
+
 * * 
 * 
 * * * * 
@@ -151,7 +155,8 @@ int main()
    }
 }
 
-question 4
+pattern 5
+
 *
 ****
 *
@@ -176,6 +181,8 @@ int main()
         printf("\n");
     }
 }
+
+pattern 6
 
 * 
 * 
@@ -206,6 +213,8 @@ int main()
     }
     
 }
+
+pattern 7
 
 * 
 * 
@@ -259,6 +268,8 @@ int main()
     
 }
 
+pattern 8
+
 *****
 *
 *
@@ -289,6 +300,8 @@ int main()
      return 0;
  }
  
+pattern 9
+
 **
 * 
 ****
@@ -299,7 +312,9 @@ int main()
 * * * 
 * * * 
 ********
- #include <stdio.h>
+pattern 10 
+
+#include <stdio.h>
  int main(){
      
      for(int i=1; i<=4; i++){
@@ -318,6 +333,7 @@ int main()
      return 0;
  }
  
+pattern 11
 
 **
 * 
@@ -349,6 +365,8 @@ int main()
      return 0;
  }
  
+pattern 12
+
 *****
 * 
 ***
@@ -379,6 +397,8 @@ int main()
      return 0;
  }
  
+pattern 13
+
 **
 *
 *
@@ -408,7 +428,9 @@ int main()
      
      return 0;
  }
- 
+
+pattern 14
+
 ***
 *
 ******
@@ -433,6 +455,8 @@ int main()
      
      return 0;
  }
+
+pattern 15
 
 * 
 * 
@@ -462,7 +486,9 @@ int main()
      
      return 0;
  }
- 
+
+pattern 16
+
 *
 * * * * 
 *
@@ -489,7 +515,9 @@ int main()
      
      return 0;
  }
- 
+
+pattern 17
+
 * * * 
 *
 *
@@ -522,7 +550,9 @@ int main()
      
      return 0;
  }
- 
+
+pattern 18
+
 * * * * * * * * * * 
 *
 * * * * * * * * 
@@ -562,7 +592,9 @@ int main()
      
      return 0;
  }
- 
+
+pattern 19
+
 * * * * * 
 *
 *
