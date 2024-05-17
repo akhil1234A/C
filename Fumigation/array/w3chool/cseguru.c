@@ -102,3 +102,38 @@ for(int i=0; i<size; i++){
 return 0; 
 }
 
+reverse half of array
+
+#include <stdio.h>
+
+int main()
+{
+    int arr[] = {1,2,3,4,5,6};
+    
+    int n = sizeof(arr)/sizeof(arr[0]);
+    printf("%d \n",n);
+    
+    // int half= n%2==0? n*0.25+1 : n/2;
+    // printf("%d \n",half);
+    
+    
+    // for(int i=0; i<half; i++){
+    //     int temp = arr[i];
+    //     arr[i] = arr[half-i];
+    //     arr[half-i]=temp;  
+    // }
+    
+      for(int i=0,j=(n/2)-1; i<n/4; i++){
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j]=temp;  
+    }
+    
+     for(int i=0; i<n; i++){
+        printf("%d ",arr[i]);
+        
+    }
+    
+
+    return 0;
+}
