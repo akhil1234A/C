@@ -198,4 +198,67 @@ void main() {
     
 }
 
+print even and odd number separately
 
+without creating array
+#include <stdio.h>
+
+
+
+void main() {
+  
+  int arr[] = {1,2,3,4,5};
+  int size = sizeof(arr)/sizeof(arr[0]);
+  
+  printf("Odd numbers are: ");
+  for(int i=0; i<size; i++){\
+      if(arr[i]%2!=0)
+        printf("%d ",arr[i]);
+  }
+  
+  printf("\nEven numbers are: ");
+  for(int i=0; i<size; i++){\
+      if(arr[i]%2==0)
+        printf("%d ",arr[i]);
+  }
+    
+}
+
+with array
+#include <stdio.h>
+
+
+
+void main() {
+  
+  int arr[] = {1,2,3,4,5};
+  int size = sizeof(arr)/sizeof(arr[0]);
+  
+  int odd[20],even[20],o=0,e=0;
+
+  for(int i=0; i<size; i++){
+      if(arr[i]%2!=0){
+            odd[o]=arr[i];
+            o++;
+      }
+      else{
+            even[e]=arr[i];
+            e++;
+      }
+  }
+  
+  
+  printf("Odd numbers are: ");
+  for(int i=0; i<o; i++){
+     
+        printf("%d ",odd[i]);
+  }
+    
+  
+  printf("\nEven numbers are: ");
+  for(int i=0; i<e; i++){
+     
+        printf("%d ",even[i]);
+  }
+    
+}
