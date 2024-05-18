@@ -262,3 +262,33 @@ void main() {
   }
     
 }
+
+find second largest element in array 
+#include <stdio.h>
+
+
+
+void main() {
+  
+  int arr[] = {1,2,3,4,5,9,7,8};
+  int size = sizeof(arr)/sizeof(arr[0]);
+  
+  int larNum=arr[0], secondLargest=0;
+
+  for(int i=1; i<size; i++){
+    if(larNum<arr[i]){
+        secondLargest = larNum;
+        larNum = arr[i];
+    }
+    else if(secondLargest<arr[i] && larNum>arr[i])
+        secondLargest = arr[i];
+  }
+  
+  
+  printf("Second largest number: ");
+  printf("%d ",secondLargest);
+ 
+  
+ 
+    
+}  
