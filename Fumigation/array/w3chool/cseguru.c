@@ -137,3 +137,65 @@ int main()
 
     return 0;
 }
+
+decimal to binary 
+
+
+// #include <stdio.h>
+// int main()
+// {
+//     int n,num,binary[100],i=0; 
+    
+//     n=5; 
+//     num = n; 
+    
+//     while(num>0){
+//         if(2*(num/2)==num){
+//             binary[i]=0;
+//             i++;
+//             num=num/2;
+//         }
+//         else {
+//         binary[i]=1;
+//         i++; 
+//         num = num/2; 
+//         }
+//     }
+    
+//     for(int j=i-1; j>=0; j--){
+//         printf("%d",binary[j]);
+//     }
+
+//     return 0;
+// }
+
+#include <stdio.h>
+
+void binary(int n){
+    
+    int temp,arr[25],i;
+    
+    for(i=0; n>0; i++){
+        temp = n%2;
+        arr[i]=temp;
+        n=n/2; 
+    }
+    
+    printf("binary number are: ");
+    for(int j=i-1; j>=0; j--){
+        printf("%d",arr[j]);
+    }
+}
+
+
+void main() {
+    int n;
+    
+    printf("Enter a number: \n");
+    scanf("%d",&n);
+    
+    binary(n);
+    
+}
+
+
