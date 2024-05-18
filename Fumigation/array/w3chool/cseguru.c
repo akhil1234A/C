@@ -264,7 +264,37 @@ void main() {
 }
 
 find second largest element in array 
+// #include <stdio.h>
+
+
+
+// void main() {
+  
+//   int arr[] = {1,2,3,4,5,9,7,8};
+//   int size = sizeof(arr)/sizeof(arr[0]);
+  
+//   int larNum=arr[0], secondLargest=0;
+
+//   for(int i=1; i<size; i++){
+//     if(larNum<arr[i]){
+//         secondLargest = larNum;
+//         larNum = arr[i];
+//     }
+//     else if(secondLargest<arr[i] && larNum>arr[i])
+//         secondLargest = arr[i];
+//   }
+  
+  
+//   printf("Second largest number: ");
+//   printf("%d ",secondLargest);
+ 
+  
+ 
+    
+// }  
+
 #include <stdio.h>
+#include <limits.h>
 
 
 
@@ -273,9 +303,9 @@ void main() {
   int arr[] = {1,2,3,4,5,9,7,8};
   int size = sizeof(arr)/sizeof(arr[0]);
   
-  int larNum=arr[0], secondLargest=0;
+  int larNum=INT_MIN, secondLargest=INT_MIN;
 
-  for(int i=1; i<size; i++){
+  for(int i=0; i<size; i++){
     if(larNum<arr[i]){
         secondLargest = larNum;
         larNum = arr[i];
@@ -292,3 +322,147 @@ void main() {
  
     
 }  
+ 
+  
+ 
+    
+
+
+second small element in array 
+
+// #include <stdio.h>
+
+
+
+// void main() {
+  
+//   int arr[] = {1,2,3,4,5,9,7,8};
+//   int size = sizeof(arr)/sizeof(arr[0]);
+  
+//   int smallNum=arr[0], secondSmall=arr[1];
+
+//   for(int i=1; i<size; i++){
+//     if(smallNum>arr[i]){
+//         secondSmall = smallNum;
+//         smallNum = arr[i];
+//     }
+//     else if(secondSmall>arr[i] && smallNum<arr[i])
+//         secondSmall= arr[i];
+//   }
+  
+  
+//   printf("Second largest number: ");
+//   printf("%d ",secondSmall);
+// }
+
+#include <stdio.h>
+#include <limits.h>
+
+
+
+void main() {
+  
+  int arr[] = {1,2,3,4,5,9,7,8};
+  int size = sizeof(arr)/sizeof(arr[0]);
+  
+  int smallNum=INT_MAX, secondSmall=INT_MAX;
+
+  for(int i=0; i<size; i++){
+    if(smallNum>arr[i]){
+        secondSmall = smallNum;
+        smallNum = arr[i];
+    }
+    else if(secondSmall>arr[i] && smallNum<arr[i])
+        secondSmall= arr[i];
+  }
+  
+  
+  printf("Second largest number: ");
+  printf("%d ",secondSmall);
+ 
+count elements and print 
+#include <stdio.h>
+
+void main() {
+  
+  int arr[] = {30,20,30,30,20,83};
+  int arr2[] = {30,20,30,30,20,83};
+  int arr3[]= {1,1,1,1,1,1};
+  int size = sizeof(arr)/sizeof(arr[0]);
+  
+  int count =1; 
+  
+  for(int i=0; i<size-1; i++){
+      count = 1; 
+      for(int j=i+1;j<size;j++){
+          
+          if(arr2[i]!=-1){
+            if(arr2[i]==arr2[j]){
+                count++; 
+                arr2[j]=-1; 
+              
+            }
+          }
+      }
+      arr3[i]=count; 
+  }
+  
+  for(int i=0; i<size; i++){
+      
+      if(arr2[i]!=-1){
+          printf("element %d - count %d\n",arr2[i],arr3[i]);
+      }
+  }
+      
+}
+  
+#include <stdio.h>
+void main() {
+  
+  int arr[] = {30,20,30,30,20,83};
+  int size = sizeof(arr)/sizeof(arr[0]);
+  
+  int count =1; 
+  
+  for(int i=0; i<size; i++){
+      count = 1; 
+      for(int j=i+1;j<size;j++){
+          
+       if(arr[i]==-1){
+            continue;
+       }    
+        if(arr[i]==arr[j]){
+                count++; 
+                arr[j]=-1; 
+              
+            }
+          
+      }
+        if(arr[i]!=-1)
+            printf("element %d - count %d\n",arr[i],count);
+  }
+  
+  }
+      
+
+  
+
+  
+ 
+    
+
+ 
+  
+ 
+    
+  
+ 
+    
+
+ 
+  
+ 
+    
+ 
+    
+}
