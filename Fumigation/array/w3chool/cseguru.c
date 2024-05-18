@@ -443,6 +443,89 @@ void main() {
   }
   
   }
+
+swap two elements in array using pointer 
+#include <stdio.h>
+void main() {
+  
+ int a[]={1,2,3,4,5};
+ int temp;
+ 
+//  //method 1
+//   int *p1 = &a[0]; // Pointer to the first element
+//   int *p5 = &a[4]; // Pointer to the last element
+
+//   temp = *p1;  // Store the value of the first element
+//   *p1 = *p5;      // Assign the value of the last element to the first element
+//   *p5 = temp;      // Assign the stored value (original first element) to the last element 
+
+//method 2
+ temp = *(a+1);
+ a[1] = *(a+3);
+ a[3] = temp;
+ 
+ 
+ printf("%d ",a[1]);
+ printf("%d",a[3]);
+  
+  }
+
+swap two variables without a third variable
+
+method 1
+#include <stdio.h>
+void main() {
+  
+ int a =4; 
+ int b = 5; 
+ 
+ a = a*10+b;
+ b = a/10;
+ a = a%10; 
+ 
+ printf("%d ",a);
+ printf("%d",b);
+  
+  }
+    
+method 2
+#include <stdio.h>
+void main() {
+  
+ int a[]={1,2,3,4,5};
+ int temp;
+ 
+a[1] ^= a[3];
+a[3] ^= a[1];
+a[1] ^= a[3];
+
+
+ 
+ printf("%d ",a[1]);
+ printf("%d",a[3]);
+  
+  }
+ 
+swap every pair of adjacent elements 
+#include <stdio.h>
+void main() {
+  
+ int a[]={1,2,3,4,5,6};
+ int size = sizeof(a)/sizeof(a[0]);
+ 
+ for(int i=0; i<size; i+=2){
+         int temp = a[i];
+         a[i] = a[i+1];
+         a[i+1] = temp; 
+     }
+ 
+
+  for(int i=0; i<size; i++){
+     printf("%d ",a[i]);
+ }
+
+
+  }
       
 
   
@@ -463,6 +546,13 @@ void main() {
   
  
     
+  
  
     
-}
+
+ 
+  
+ 
+    
+ 
+    
