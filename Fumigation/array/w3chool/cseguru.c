@@ -528,7 +528,70 @@ void main() {
   }
       
 
+rotate elements by k times (right and left)
+#include <stdio.h>
+
+void rotateLeft(int *arr, int k, int size){
+   
+   for(int j=1; j<=k; j++){
+    int temp=arr[size-1];
+    int i; 
+    for(i = size-1; i>0; i--){
+       
+        arr[i] = arr[i-1];
+    }
+    arr[i]=temp; 
+    
+   }
+   
+   
+    for(int i=0; i<size; i++){
+     printf("%d ",arr[i]);
+    }
+}
+
+void rotateRight(int *arr, int k, int size){
+     for(int j=1; j<=k; j++){
+    int temp=arr[0];
+    int i; 
+    for(i=0; i<size-1; i++){ 
+       
+        arr[i] = arr[i+1];
+    }
+    arr[i]=temp; 
+    
+   }
+   
+   
+    for(int i=0; i<size; i++){
+     printf("%d ",arr[i]);
+    }
+}
+
+
+void main() {
   
+ int a[]={1,2,3,4,5,6};
+ int size = sizeof(a)/sizeof(a[0]);
+ 
+
+ //rotateLeft(a,3,6);
+ rotateRight(a,3,6);
+
+
+  }
+      
+
+  
+
+  
+ 
+    
+
+ 
+  
+ 
+    
 
   
  
