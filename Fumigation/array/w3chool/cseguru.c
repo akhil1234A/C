@@ -581,7 +581,104 @@ void main() {
 
   }
       
+sum of all elements in an array with different constraints
 
+#include <stdio.h>
+
+void sumPrime(int *arr, int size){
+   
+   int sum = 0; 
+    for(int i=0; i<size; i++){
+        
+        int flag = 0; 
+        
+        for(int j=2; j<=arr[i]/2; j++){
+            if(arr[i]%j==0){
+                flag=1; 
+                break; 
+            }
+        }
+        
+        if(flag==0){
+            sum+=arr[i];
+        }
+    }
+    printf("\n%d ",sum);
+}
+
+void sumAll(int *arr, int size){
+   
+   int sum = 0; 
+    for(int i=0; i<size; i++){
+        sum+=arr[i];
+    }
+    printf("\n%d ",sum);
+}
+
+void sumOdd(int *arr, int size){
+   
+   int sum = 0; 
+    for(int i=0; i<size; i++){
+        
+        if(arr[i]%2==1){
+        sum+=arr[i];
+        }
+    }
+    printf("\n%d ",sum);
+}
+
+void sumEven(int *arr, int size){
+   
+   int sum = 0; 
+    for(int i=0; i<size; i++){
+        
+        if(arr[i]%2==0){
+        sum+=arr[i];
+        }
+    }
+    printf("\n%d ",sum);
+}
+
+void sumOfPositive(int *arr, int size){
+   
+   int sum = 0; 
+    for(int i=0; i<size; i++){
+        
+        if(arr[i]>0){
+        sum+=arr[i];
+        }
+    }
+    printf("\n%d ",sum);
+}
+
+void sumOfNegative(int *arr, int size){
+   
+   int sum = 0; 
+    for(int i=0; i<size; i++){
+        
+        if(arr[i]<0){
+        sum+=arr[i];
+        }
+    }
+    printf("\n%d ",sum);
+}
+
+void main() {
+  
+ int a[]={1,2,3,4,5,6};
+ int b[]={-1,0,1,-2,2,-3};
+ 
+ int size = sizeof(a)/sizeof(a[0]);
+ int sizeb = sizeof(b)/sizeof(b[0]);
+ 
+ sumPrime(a,size);
+ sumAll(a,size);
+ sumOdd(a,size);
+ sumEven(a,size);
+ sumOfNegative(b,sizeb);
+ sumOfPositive(b,sizeb);
+
+  }
   
 
   
