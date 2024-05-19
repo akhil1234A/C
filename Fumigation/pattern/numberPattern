@@ -1,3 +1,5 @@
+pattern group 1: relative row and column pattern 
+relation between row and col
 
 Pattern 1: Relative Row 
 enter a number: 4
@@ -168,6 +170,47 @@ for(int i=1; i<=row; i++) {
 	    int whatToPrint = fmin(fmin(i,row+1-i),fmin(j,row+1-j));
 	    
 		printf("%d ", n+1-whatToPrint);
+	} 
+	printf("\n");
+} 
+
+
+
+return 0; 
+}
+
+pattern group 2: 
+
+pattern 1
+enter a number: 4
+3 
+6 9 
+12 15 18 
+21 24 27 30 
+70 63 56 49 
+42 35 28 
+21 14 
+7 
+
+#include <stdio.h>
+
+
+int main() {
+
+int n; 
+printf("enter a number: ");
+scanf("%d",&n);
+
+int numberThree =3, numberSeven=70;
+
+for(int i=1; i<=2*n; i++) {
+    
+	for(int j=1; j<= (i>n? 2*n-i+1 : i); j++){
+	    
+		printf("%d ",(i>4? numberSeven : numberThree));
+		
+		if(i<5) numberThree+=3; 
+		else numberSeven-=7; 
 	} 
 	printf("\n");
 } 
