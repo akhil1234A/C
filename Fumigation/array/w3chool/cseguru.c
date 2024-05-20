@@ -720,11 +720,122 @@ int main() {
     
 }
  
-    
+moving zeros to the beginning of the array 
 
- 
+#include <stdio.h>
+
+int main() {
+    
+    int arr[20],size,i,pos,val,j; 
+    
+    printf("Enter the size of the array: ");
+    scanf("%d",&size);
+    printf("Enter the elements of the array: \n");
+    for(i=0; i<size; i++){
+        printf("enter element %d -  ",i);
+        scanf("%d",&arr[i]);
+    }
   
- 
+   j = size-1; //finding position for non zero element
+   
+   for(i=size-1; i>=0; i--){
+       if(arr[i]!=0){
+           arr[j--]=arr[i];
+       }
+   }
+   
+   //fill zero's in remaining position 
+   while(j>=0){
+       arr[j--]=0; 
+   }
+    
+    printf("Array Elements: \n");
+    for(i=0; i<size; i++){
+        printf("%d ",arr[i]);
+    }
+    
+}
+
+moving zero's in end of array 
+#include <stdio.h>
+
+int main() {
+    
+    int arr[20],size,i,pos,val,j; 
+    
+    printf("Enter the size of the array: ");
+    scanf("%d",&size);
+    printf("Enter the elements of the array: \n");
+    for(i=0; i<size; i++){
+        printf("enter element %d -  ",i);
+        scanf("%d",&arr[i]);
+    }
+  
+   j = 0; //finding position for non zero element
+   
+   for(i=0; i<size; i++){
+       if(arr[i]!=0){
+           arr[j++]=arr[i];
+       }
+   }
+   
+   //fill zero's in remaining position 
+   while(j<size){
+       arr[j++]=0; 
+   }
+    
+    printf("Array Elements: \n");
+    for(i=0; i<size; i++){
+        printf("%d ",arr[i]);
+    }
+    
+}
+
+Move all negative numbers to the beginning of an array without sorting.c 
+  
+ #include <stdio.h>
+
+int main() {
+
+int arr[20],i,j,size; 
+
+printf("enter the size of the array: ");
+scanf("%d",&size);
+printf("enter the elements of the array: \n");
+for(i=0; i<size; i++){
+ printf("the element %d is : ",i);
+ scanf("%d",&arr[i]);
+}
+
+j=0; 
+
+for(i=0; i<size; i++){
+	
+	if(arr[i]<0){
+	  int temp=arr[i];
+
+	  for(int k=i; k>j; k--){
+	     arr[k]=arr[k-1];		
+	  }
+
+	  arr[j++]=temp; 
+           
+	}
+	
+}
+
+
+
+
+printf("The array elements are: \n");
+for(i=0; i<size; i++){
+	printf("%d ",arr[i]);
+}
+
+
+
+return 0; 
+}
     
 
   
