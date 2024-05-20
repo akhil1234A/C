@@ -681,7 +681,44 @@ void main() {
   }
   
 
+insert element at sorted position 
+#include <stdio.h>
+
+int main() {
+    
+    int arr[20],size,i,pos,val,j; 
+    
+    printf("Enter the size of the array: ");
+    scanf("%d",&size);
+    printf("Enter the elements of the array: \n");
+    for(i=0; i<size; i++){
+        printf("enter element %d -  ",i);
+        scanf("%d",&arr[i]);
+    }
   
+    printf("Enter the value to insert: ");
+    scanf("%d",&val);
+    
+    //finding the position 
+    for(j=0; j<size; j++){
+        if(arr[j]>val)
+            break;
+    }
+ 
+  
+  
+    for(i=size-1; i>=j; i--){
+        arr[i+1] = arr[i];
+    }
+    arr[j]=val; 
+    size++; 
+    
+    printf("Array Elements: \n");
+    for(i=0; i<size; i++){
+        printf("%d ",arr[i]);
+    }
+    
+}
  
     
 
