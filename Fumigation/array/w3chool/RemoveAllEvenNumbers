@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+   int arr[] = {1,2,3,4,5,6,7,8,9,10};
+   int size = sizeof(arr)/sizeof(arr[0]);
+   
+   int i,j;
+   for(i=0; i<size; i++){
+       //finding position of eveb number
+       if(arr[i]%2==0){
+           //implementing deletion algorithm i as position
+           for(j=i; j<size-1; j++){
+               arr[j]=arr[j+1];
+           }
+           size--; //adjusting size after deletion
+       }
+   }
+   
+   for(i=0; i<size; i++){
+       printf("%d ",arr[i]);
+   }
+}
