@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <limits.h>
+
+
+int main(){
+    
+    int arr[]={2,3,5,4,3,1,6,1,7,8};
+    int size = sizeof(arr)/sizeof(arr[0]);
+    
+    int i,big=INT_MIN,min=INT_MAX; 
+    
+    for(i=0; i<size; i++){
+      if(big<arr[i]){
+          big=arr[i];
+      }
+      if(min>arr[i]){
+          min=arr[i];
+      }
+    }
+        
+       
+    
+
+        printf("big %d small %d",big,min);
+   
+    
+    return 0; 
+}
