@@ -1,0 +1,39 @@
+ABCDEFGHFEDCBA
+ABCDEF  FEDCBA
+ABCDE    EDCBA
+ABCD      DCBA
+ABC        CBA
+AB          BA
+A            A
+AB          BA
+ABC        CBA
+ABCD      DCBA
+ABCDE    EDCBA
+ABCDEF  FEDCBA
+ABCDEFGHFEDCBA
+
+#include <stdio.h>
+int main() {
+
+int n=7; 
+
+for(int i=0; i<2*n-1; i++){
+for(int j=0; j<2*n; j++) {
+	int charIndex = j>n? 2*n-j-1 : j; 
+	
+	
+	if(i<n){
+	if(j<n-i || j>n+i-1) printf("%c",charIndex+65);
+	else printf(" ");
+	} else{
+	   int RelativeRow = (n-1)*2-i; 
+	   if(j<n-RelativeRow || j>n+RelativeRow-1) printf("%c",charIndex+65);
+	   else printf(" ");
+	}
+}
+printf("\n");
+}
+
+
+return 0; 
+}
