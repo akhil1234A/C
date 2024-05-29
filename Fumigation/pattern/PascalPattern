@@ -1,54 +1,45 @@
+
+method 1: 
+
 #include <stdio.h>
-
-void printPascal(int n) {
-    for (int line = 1; line <= n; line++) {
-        int C = 1; // The first value in a line is always 1
-        for (int i = 1; i <=line; i++) {
-            // Print leading spaces for alignment
-            
-            printf("%d ",C);
-  
-            C = C * (line - i) / i;
-            
-        }
-        printf("\n");
-    }
-}
-
 int main() {
-    int n;
-    printf("Enter the number of rows: ");
-    scanf("%d", &n);
-    printPascal(n);
-    return 0;
+int n=5; 
+int c;
+for(int i=1; i<=n; i++){
+    int c = 1; 
+    for(int j=1; j<=i; j++){
+        printf("%d ",c);
+        c = c * (i-j)/j;
+    }
+    printf("\n"); 
+}
+ return 0;    
 }
 
+method 2:
 
 #include <stdio.h>
 
-void printPascal(int n) {
-    int arr[n][n]; // Declare a 2D array to store the values of Pascal's Triangle
-
-    // Initialize the first element of each row to 1
-    for (int line = 0; line < n; line++) {
-        for (int i = 0; i <= line; i++) {
-            // The first and last values in every row are 1
-            if (i == 0 || i == line) {
-                arr[line][i] = 1;
-            } else {
-                // Other values are sum of values just above and left of above
-                arr[line][i] = arr[line - 1][i - 1] + arr[line - 1][i];
-            }
-            printf("%d ", arr[line][i]);
-        }
-        printf("\n");
-    }
-}
-
 int main() {
-    int n;
-    printf("Enter the number of rows: ");
-    scanf("%d", &n);
-    printPascal(n);
-    return 0;
+
+int n=5; 
+int arr[20][20];
+
+for(int i=0; i<n; i++){
+    for(int j=0; j<=i; j++){
+         
+         if(j==0 || j==i){
+            arr[i][j] = 1;
+         }
+         else{
+             arr[i][j] = arr[i-1][i-j]+arr[i-1][i-j-1];
+         }
+         printf("%d ",arr[i][j]);
+        
+    }
+    printf("\n"); 
+}
+    
+ 
+ return 0;    
 }
