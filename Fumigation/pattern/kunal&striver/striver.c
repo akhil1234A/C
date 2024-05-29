@@ -41,9 +41,9 @@ int main() {
 int main() {
     // Write C code here
     int n = 5;
-    for(int i=1; i<=2*n; i++){
+    for(int i=1; i<2*n; i++){
         
-        int numberOfSpaces =  i<=n ? n-i : i-n-1;
+        int numberOfSpaces =  i<=n ? n-i : i-n;
         for(int j=0; j<numberOfSpaces; j++)
         {
             printf(" ");
